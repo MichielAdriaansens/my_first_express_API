@@ -1,0 +1,45 @@
+<h1>Cattle</h1>
+<ul>
+    {{{ animalList }}}
+</ul>
+
+<div>
+    <input type="text" placeholder="Type an animal here" />
+    <button onclick={postAnimal()}>Add</button>
+</div>
+
+<script>
+    async function postAnimal() {
+        const newAnimal = document.getElementsByTagName('input')[0].value;
+        if (!newAnimal.length > 0) {
+            console.log('no input');
+            return;
+        }
+
+        await window.fetch('http://localhost:3005/animals', {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify({
+                'animal': newAnimal
+            }),
+        });
+
+        location.reload();
+    };
+
+    document.querySelector('input').addEventListener('keypress', event => {
+        if (event.keyCode == 13) {
+            postAnimal();
+        }
+    });
+
+    let animalElement = document.querySelectorAll('li');
+    animalElement.forEach(el => {
+        el.addEventListener('click', event => {
+            console.log(event.target);
+        });
+    });
+
+</script>

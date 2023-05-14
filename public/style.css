@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    background-color: black;
+
+}
+
+.container {
+    margin: auto;
+    color: aqua;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+img {
+    width: 600px;
+    /* border-radius: 5px; */
+}
+
+ul {
+    border-radius: 14px;
+    margin-top: 10%;
+    padding: 10px;
+    color: black;
+    background-color: azure;
+    opacity: 0.75;
+    font-size: 30px;
+}
+
+input {
+    margin-top: 10px;
+}
+
+li:hover {
+    cursor: pointer;
+    color: red;
+}
