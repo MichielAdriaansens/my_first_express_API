@@ -14,12 +14,12 @@ const port = 3005;
 
 
 
-//middleWare.. data before 'next()' goes up the request chain being processed by server.
+//middleWare.. code before 'next()' goes up the request chain being processed by server.
 app.use((req, res, next) => {
     const timeStart = Date.now();
 
     next();
-    //data after 'next()' goes back to client side down the response chain.
+    //code after 'next()' goes back to client side down the response chain.
     const deltaTime = Date.now() - timeStart;
     console.log(`${req.method} ${req.baseUrl} ${req.url} time: ${deltaTime}ms`);
 
