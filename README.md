@@ -1,9 +1,11 @@
 # my_first_express_API
 
+A list of farm animals you can update. Sstored server side.
+
 Learning about nodejs, Express and serverside rendering 🧠
 Using MVC model.
 
-Instructions:
+# install
 
 (REQUIREMENT: Nodejs must be installed)
 
@@ -13,6 +15,8 @@ Instructions:
 
 3. in terminal type: run npm install
 
-4. in terminal type: node index
+# use
 
-5. in browser goto: http://localhost:3005/
+1. in terminal type: node index
+
+2. in browser goto: http://localhost:3005/
